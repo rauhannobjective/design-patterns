@@ -1,0 +1,47 @@
+{
+  "name": "design/patterns",
+  "description": "Estudos sobre os design patterns",
+  "type": "project",
+  "license": "private",
+  "autoload": {
+    "psr-4": {
+      "DesignPatterns\\Src\\": "src/",
+      "DesignPatterns\\Config\\": "config/"
+    },
+    "files": [
+      "config/settings.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DesignPatterns\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "rauhann",
+      "email": "rauhann2711@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.1",
+    "vlucas/phpdotenv": "^5.4",
+    "slim/slim": "^4.2",
+    "slim/psr7": "^1.5",
+    "nyholm/psr7": "^1.5",
+    "nyholm/psr7-server": "^1.0",
+    "guzzlehttp/psr7": "^2",
+    "laminas/laminas-diactoros": "^2.11",
+    "ext-pdo": "*",
+    "respect/validation": "^2.2",
+    "robmorgan/phinx": "^0.12.10",
+    "psr/container": "^1.1",
+    "php-di/slim-bridge": "^3.2",
+    "fzaninotto/faker": "^1.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9",
+    "vimeo/psalm": "^4.23"
+  }
+}
