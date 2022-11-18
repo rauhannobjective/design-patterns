@@ -26,3 +26,7 @@ $GLOBALS['app']->group('/patterns/prototype', function (RouteCollectorProxy $gro
 $GLOBALS['app']->group('/patterns/singleton', function (RouteCollectorProxy $group) {
     $group->post('/delivery/create', \DesignPatterns\Src\CreationalPatterns\Singleton\Actions\Delivery\CreateDeliveryAction::class);
 })->add(JsonBodyParserMiddleware::class);
+
+$GLOBALS['app']->group('/patterns/pool', function (RouteCollectorProxy $group) {
+    $group->post('/delivery/create', \DesignPatterns\Src\CreationalPatterns\Pool\Actions\Delivery\CreateDeliveryAction::class);
+})->add(JsonBodyParserMiddleware::class);
