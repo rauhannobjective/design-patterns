@@ -30,3 +30,7 @@ $GLOBALS['app']->group('/patterns/singleton', function (RouteCollectorProxy $gro
 $GLOBALS['app']->group('/patterns/pool', function (RouteCollectorProxy $group) {
     $group->post('/delivery/create', \DesignPatterns\Src\CreationalPatterns\Pool\Actions\Delivery\CreateDeliveryAction::class);
 })->add(JsonBodyParserMiddleware::class);
+
+$GLOBALS['app']->group('/patterns/simple-factory', function (RouteCollectorProxy $group) {
+    $group->get('/delivery/tax', \DesignPatterns\Src\CreationalPatterns\SimpleFactory\Actions\Delivery\CreateDeliveryAction::class);
+})->add(JsonBodyParserMiddleware::class);
